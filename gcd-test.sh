@@ -4,7 +4,6 @@
 result=$(./gcd.sh)
 if [ $result = '引数エラー(自然数を2つ入力)' ] ; then
 	echo 'OK(引数が0個の時)'
-	exit 1
 else
 	echo 'NG(引数が0個の時)'
 	exit 1
