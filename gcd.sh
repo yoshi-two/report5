@@ -33,17 +33,17 @@ a=$1
 b=$2
 if [ $a -lt $b ]; then
 	tmp=$a;
-	$a=$b;
-	$b=$tmp;
+	a=$b;
+	b=$tmp;
 fi
 
 # ユークリッドの互除法
-rem=$(($a%$b))
-while [ $r -ne 0 ]
+rem=$(( $a % $b ))
+while [ $rem -ne 0 ];
 do
-	$a=$b;
-	$b=$rem;
-	$r=$(($a%$b));
+	a=$b
+	b=$rem
+	rem=$(( $a % $b ))
 done
 
 echo $b
